@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="%r [%p] %c{1}: %m%n"/> 
+        </Console>
+    </appenders>
+    <loggers>
+        <root level="INFO">
+            <appender-ref ref="STDOUT"/>
+        </root>
+	<logger name="org.jgroups" level="${sys:LogLevel}"/>
+    </loggers>
+</configuration>
