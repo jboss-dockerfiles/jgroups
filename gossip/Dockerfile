@@ -1,13 +1,13 @@
 FROM jboss/base-jdk:8
 
-ENV JGROUPS_VERSION 4.0.0.CR2
+ENV JGROUPS_VERSION 4.0.0.Final
 
 ENV LOG4J2_VERSION 2.7
 ENV LOG4J2_FILE /opt/jboss/log4j2.xml
 
 ENV LogLevel INFO
 
-ENV JGROUPS_SHA1 17ac5819426916dd20e7e57d1e8d8c4a92b2f620
+ENV JGROUPS_SHA1 99966c54036245e57039d609578b750214b3c61b
 
 RUN curl -o jgroups.jar https://repo1.maven.org/maven2/org/jgroups/jgroups/$JGROUPS_VERSION/jgroups-$JGROUPS_VERSION.jar \ 
     && sha1sum jgroups.jar | grep $JGROUPS_SHA1
